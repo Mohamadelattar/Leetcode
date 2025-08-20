@@ -1,14 +1,13 @@
 package Jump_game;
 
 public class Solution {
-
     public boolean canJump(int[] nums) {
-        int jumps = nums[0];
-        while(jumps < nums[nums.length - 1]){
-            jumps += nums[jumps];
-            if(jumps == nums[nums.length - 1])
-                return true;
+        int goal = nums.length - 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (i + nums[i] >= goal) {
+                goal = i;
+            }
         }
-        return false;
+        return goal == 0;
     }
 }
