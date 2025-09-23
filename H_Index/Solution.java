@@ -1,10 +1,7 @@
 package H_Index;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.stream.IntStream;
 
-import static java.util.Arrays.*;
 
 public class Solution {
     public static void main(String[] args) {
